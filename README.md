@@ -36,3 +36,10 @@ This component is part of a larger, long-term project and serves as an early exa
     - delayed increment using `setTimeout`
     - correct increment twice using functional updates
 - Reset button to return the counter to zero
+
+## Gallery Features
+- displays a simple image gallery using React state
+- allows navigation through images using `Previous` and `Next` buttons
+   - navigation buttons are disabled at the start and end of the gallery
+- updates description based on current index (same image is used for space)
+
