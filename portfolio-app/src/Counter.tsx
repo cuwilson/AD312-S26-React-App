@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "./App.css";
 import "./Counter.css";
 
 
@@ -23,7 +24,7 @@ function Counter() {
 
     const reset = () => setCount(0);
 
-    return (<div className="counter-container">
+    return (<div className="container counter-container">
         <h1>Counter: {count}</h1>
         <button onClick={increment}>Increment</button>
         <button className="warning-btn" onClick={incrementTwice}>Increment Twice</button>

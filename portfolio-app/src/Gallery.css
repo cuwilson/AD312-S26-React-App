@@ -1,0 +1,24 @@
+/* Gallery.css */
+
+.gallery-container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.gallery-image {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.gallery-description {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* buttons inherit your soft style */
+.gallery-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
