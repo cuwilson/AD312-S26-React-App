@@ -6,14 +6,15 @@ import "./Counter.css";
 function Counter() {
     const [count, setCount] = useState(0);
 
-    const increment = () => setCount (count + 1);
-    const incrementTwice = () => 
-        {setCount (count + 1)
-        setCount (count + 1);}
+    const increment = () => setCount(count + 1);
+    const incrementTwice = () => {
+        setCount(count + 1)
+        setCount(count + 1);
+    }
 
     const incrementDelay = () => {
         setTimeout(() => {
-            setCount (count + 1);
+            setCount(count + 1);
         }, 2000);
     }
 
@@ -35,4 +36,3 @@ function Counter() {
 }
 
 export default Counter;
-    

@@ -4,9 +4,11 @@
 *AD312 - Intermediate Dev 2 Spring 2026 at NSC*
 
 ### Overview
-This project is a simple React Counter component built using hooks. It demonstrates how state updates work in React, including some common pitfalls when updating state multiple times or asynchronously.
+This project is a collection of small React components built using hooks. It demonstrates how state updates work in React, including handling user interactions, managing form input, and working with more complex state like nested objects.
 
-This component is part of a larger, long-term project and serves as an early example of handling state and user interactions.
+The app includes multiple features such as a counter, image gallery, and user profile editor, each designed to explore different React concepts.
+
+This project is part of a larger, long-term portfolio and serves as a foundation for building more advanced React applications.
 
 ## How to Run
 
@@ -43,3 +45,14 @@ This component is part of a larger, long-term project and serves as an early exa
    - navigation buttons are disabled at the start and end of the gallery
 - updates description based on current index (same image is used for space)
 
+## UserProfile Features
+- displays user information including name, email, and address
+- uses nested state to manage structured data (address object inside user)
+- includes controlled input fields for updating address information:
+   - street
+   - city
+   - state
+   - zip
+- updates only the fields that the user provides input for, preserving existing data for blank fields
+- demonstrates functional state updates to safely modify nested objects
+- reflects changes in real time after updating the profile
