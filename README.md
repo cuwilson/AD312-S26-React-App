@@ -6,7 +6,7 @@
 ### Overview
 This project is a collection of small React components built using hooks. It demonstrates how state updates work in React, including handling user interactions, managing form input, and working with more complex state like nested objects.
 
-The app includes multiple features such as a counter, image gallery, and user profile editor, each designed to explore different React concepts.
+The app includes multiple features such as a counter, image gallery, user profile editor, and task manager, each designed to explore different React concepts.
 
 This project is part of a larger, long-term portfolio and serves as a foundation for building more advanced React applications.
 
@@ -30,7 +30,9 @@ This project is part of a larger, long-term portfolio and serves as a foundation
 - JavaScript (JSX)
 - CSS
 
-## Counter Features
+## Features
+
+### Counter
 - displays a counter value that updates in real time
 - includes multiple increment behaviors:
     - Standard increment
@@ -39,13 +41,13 @@ This project is part of a larger, long-term portfolio and serves as a foundation
     - correct increment twice using functional updates
 - Reset button to return the counter to zero
 
-## Gallery Features
+### Gallery
 - displays a simple image gallery using React state
 - allows navigation through images using `Previous` and `Next` buttons
    - navigation buttons are disabled at the start and end of the gallery
 - updates description based on current index (same image is used for space)
 
-## UserProfile Features
+### UserProfile
 - displays user information including name, email, and address
 - uses nested state to manage structured data (address object inside user)
 - includes controlled input fields for updating address information:
@@ -56,3 +58,13 @@ This project is part of a larger, long-term portfolio and serves as a foundation
 - updates only the fields that the user provides input for, preserving existing data for blank fields
 - demonstrates functional state updates to safely modify nested objects
 - reflects changes in real time after updating the profile
+
+### Task Manager 
+- Add new tasks using a controlled input field
+- Each task includes:
+  - a unique ID
+  - a title
+  - a completion status
+- Toggle tasks between "Done" and "Not Done"
+- Dynamically renders task list using `map()`
+- Uses immutable state updates for reliable re-renders
