@@ -1,14 +1,15 @@
 import { useState } from "react";
+import "./UserProfile.css";
 
 function UserProfile() {
     const [user, setUser] = useState({
-        name: "John Doe",
-        email: "john.doe@example.com",
+        name: "Oreo Wilson",
+        email: "oreo.wilson@cutecats.com",
         address: {
-            street: "123 Main St",
-            city: "Anytown",
+            street: "123 Fluffy Ave",
+            city: "Purrfectville",
             state: "WA",
-            zip: "12345"
+            zip: "10987"
         }
     });
 
@@ -40,7 +41,7 @@ function UserProfile() {
     }
 
     return (
-        <div className="container">
+        <div className="container profile-container">
             <h1>User Profile</h1>
             <p>Name: {name}</p>
             <p>Email: {email}</p>

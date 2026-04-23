@@ -27,11 +27,13 @@ function Counter() {
 
     return (<div className="container counter-container">
         <h1>Counter: {count}</h1>
+        <div className="button-group">
         <button onClick={increment}>Increment</button>
         <button className="warning-btn" onClick={incrementTwice}>Increment Twice</button>
         <button onClick={incrementDelay}>Increment with Delay</button>
         <button onClick={incrementTwiceCorrectly}>Correct Increment Twice</button>
         <button onClick={reset}>Reset</button>
+        </div>
     </div>)
 }
 

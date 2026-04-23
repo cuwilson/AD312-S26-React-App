@@ -4,9 +4,9 @@
 *AD312 - Intermediate Dev 2 Spring 2026 at NSC*
 
 ### Overview
-This project is a collection of small React components built using hooks. It demonstrates how state updates work in React, including handling user interactions, managing form input, and working with more complex state like nested objects.
+This project is a collection of small React components built using Vite. It demonstrates how state updates work in React, including handling user interactions, managing form input, and working with more complex state like nested objects.
 
-The app includes multiple features such as a counter, image gallery, user profile editor, and task manager, each designed to explore different React concepts.
+The app includes multiple features such as a counter, image gallery, user profile editor, task manage, and a shopping list. Each component highlights different patterns for handling state, user input, and UI updates in React.
 
 This project is part of a larger, long-term portfolio and serves as a foundation for building more advanced React applications.
 
@@ -68,3 +68,13 @@ This project is part of a larger, long-term portfolio and serves as a foundation
 - Toggle tasks between "Done" and "Not Done"
 - Dynamically renders task list using `map()`
 - Uses immutable state updates for reliable re-renders
+
+### Shopping List
+- add new shopping list items with:
+  - name
+  - quantity
+  - category (dropdown selection)
+  - additional notes
+- uses `useImmer` for managing complex and nested state
+- supports editing existing items with a dedicated edit mode:
+- remove items from the list
