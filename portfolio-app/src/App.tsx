@@ -2,6 +2,7 @@ import Counter from './Counter.tsx'
 import Gallery from './Gallery.tsx'
 import UserProfile from './UserProfile.tsx'
 import TaskManager from './TaskManager.tsx'
+import ShoppingList from './ShoppingListWithImmer.tsx'
 import './App.css'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Gallery />
       <UserProfile />
       <TaskManager />
+      <ShoppingList />
     </div>
   )
 }
