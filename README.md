@@ -78,3 +78,13 @@ This project is part of a larger, long-term portfolio and serves as a foundation
 - uses `useImmer` for managing complex and nested state
 - supports editing existing items with a dedicated edit mode:
 - remove items from the list
+
+### User Profile (Immer)
+- demonstrates managing nested state using the useImmer hook
+- sotres user data in a structured object including: 
+   - name and email
+   - contain details (phone and address)
+   - user preferences (newsletter and notifications)
+- uses controlled inputs to capture user updates in real time
+- updates only the fields that have input, preserving existing values
+- allows toggling boolean preferences

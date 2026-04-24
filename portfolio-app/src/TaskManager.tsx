@@ -31,7 +31,7 @@ function TaskManager() {
     return (
         <div className="container task-manager">
             <h1 className="task-manager-title">Tasks</h1>
-            <ul>
+            <ul className= "task-list">
                 {tasks.map((task) => (
                     <li className="task-item" key={task.id}>
                         <span className={task.completed ? "task-text completed" : "task-text"}>{task.title}</span>

@@ -13,6 +13,10 @@ h1 {
   margin-bottom: 40px;
 }
 
+h2 {
+  color: #7a5caa;
+}
+
 .container {
   background: #ffffff;
   padding: 30px;
@@ -24,23 +28,21 @@ h1 {
 .app-container {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 25px;
   padding: 40px 16px 60px;
-  
-}
-.app-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column; /* stack vertically */
-  justify-content: center; /* vertical centering */
-  align-items: center; /* horizontal centering */
-  gap: 25px; /* space between components*/
-  padding-top: 40px 16px 60px; /* extra space between items, between the edges, and extra between the bottom */
   box-sizing: border-box;
 }
+
+.full-row {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+}
+
 
 /************************************/
 /*         Button Styles            */
@@ -56,6 +58,8 @@ button {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease;
+  font-family: inherit;
+  appearance: none;
 }
 
 button:hover {
@@ -158,4 +162,74 @@ select.placeholder {
 /* normal text when selected */
 select:not(.placeholder) {
   color: #4a4a4a;
+}
+
+
+/************************************/
+/*         Checkbox Styles          */
+/************************************/
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  max-width: 300px;   /* match input width */
+  margin: 10px auto;  /* center it like inputs */
+
+  font-weight: 500;
+  color: #4a4a4a;
+  cursor: pointer;
+
+  padding: 10px 12px; /* matches input padding */
+  border-radius: 12px;
+  border: 2px solid #e6d6ff;
+  background-color: #f9f6ff;
+}
+
+/* hide default checkbox */
+.checkbox-container input {
+  display: none;
+}
+
+/* custom box */
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid #e6d6ff; /* soft purple */
+  background-color: #f9f6ff;
+  display: inline-block;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* checked state */
+.checkbox-container input:checked + .checkmark {
+  background-color: #b8f2d0; /* soft green */
+  border-color: #b8f2d0;
+}
+
+/* check icon */
+.checkbox-container input:checked + .checkmark::after {
+  content: "✔";
+  color: #4a4a4a;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+/* hover effect */
+.checkbox-container:hover .checkmark {
+  border-color: #b8f2d0;
+  background-color: #f0fff7;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
