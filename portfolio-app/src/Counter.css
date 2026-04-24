@@ -1,6 +1,6 @@
 .counter-container {
-  background: #fcfafa;
-  /*width: 800px;*/
+  width: min(1000px, 100%);
+  box-sizing: border-box;
 }
 .button-group {
   display: flex;

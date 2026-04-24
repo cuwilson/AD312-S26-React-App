@@ -1,0 +1,17 @@
+.profile-immer-container h1 {
+  margin-bottom: 10px;
+}
+
+.profile-immer-container h2 {
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+.profile-immer-container pre {
+  background: #f4f3ec;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 13px;
+  text-align: left;
+  overflow-x: auto;
+  border: 1px solid #e5e4e7;
+}
