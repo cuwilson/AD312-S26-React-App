@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useImmer } from "use-immer";
-import "./UserProfilewithImmer.css"
+import "./css/UserProfilewithImmer.css"
 
 function UserProfileWithImmer() {
     const [userProfile, updateUserProfile] = useImmer({

@@ -4,7 +4,8 @@ import UserProfile from './UserProfile.tsx'
 import TaskManager from './TaskManager.tsx'
 import ShoppingList from './ShoppingListWithImmer.tsx'
 import UserProfileWithImmer from './UserProfilewithImmer.tsx'
-import './App.css'
+import ContextDemo from "./ContextDemo.tsx";
+import './css/App.css'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       <UserProfileWithImmer />
       <TaskManager />
       <ShoppingList />
-      
+      <ContextDemo />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./TaskManager.css"
+import "./css/TaskManager.css"
 
 interface TaskObject {
     id: number;
