@@ -1,6 +1,6 @@
 import { useImmer } from 'use-immer';
 import { useState } from "react";
-import "./ShoppingListWithImmer.css";
+import "./css/ShoppingListWithImmer.css";
 
 interface ShoppingListObject {
     id: number;

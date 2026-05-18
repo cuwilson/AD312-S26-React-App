@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./Gallery.css";
+import "./css/Gallery.css";
 
 function Gallery() {
   const [index, setIndex] = useState(0);

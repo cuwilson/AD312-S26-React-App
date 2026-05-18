@@ -4,9 +4,9 @@
 *AD312 - Intermediate Dev 2 Spring 2026 at NSC*
 
 ### Overview
-This project is a collection of small React components built using Vite. It demonstrates how state updates work in React, including handling user interactions, managing form input, and working with more complex state like nested objects.
+This project is a collection of small React components built using Vite. It demonstrates how state updates work in React, including handling user interactions, managing form input, and working with nested state, and sharing state across components using the Context API.
 
-The app includes multiple features such as a counter, image gallery, user profile editor, task manage, and a shopping list. Each component highlights different patterns for handling state, user input, and UI updates in React.
+The app includes multiple features such as a counter, image gallery, user profile editor, task manager, shopping list, and Context API demo. Each component highlights different patterns for handling state, user input, UI updates, and component communication in React.
 
 This project is part of a larger, long-term portfolio and serves as a foundation for building more advanced React applications.
 
@@ -27,7 +27,7 @@ This project is part of a larger, long-term portfolio and serves as a foundation
 ### Technologies Used
 - React
 - Vite
-- JavaScript (JSX)
+- TypeScript (TSX)
 - CSS
 
 ## Features
@@ -88,3 +88,11 @@ This project is part of a larger, long-term portfolio and serves as a foundation
 - uses controlled inputs to capture user updates in real time
 - updates only the fields that have input, preserving existing values
 - allows toggling boolean preferences
+
+### Context API Demo
+- demonstrates how React Context API solves prop drilling
+- uses a shared `UserContext` to store user information
+- wraps nested components inside a `UserProvider`
+- allows deeply nested components to access shared data with `useContext`
+- includes multiple user profile components consuming the same shared context
+- updates shared state across multiple components simultaneously
