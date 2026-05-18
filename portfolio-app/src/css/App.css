@@ -1,3 +1,22 @@
+.light-mode {
+  background: linear-gradient(135deg, #e6d6ff, #d6f5e8);
+  color: #4a4a4a;
+}
+
+.dark-mode {
+  background: linear-gradient(135deg, #2d2438, #1f2f28);
+  color: #f4f4f4;
+}
+
+.theme-switcher {
+  flex: 0 0 100%;
+  max-width: 220px;
+}
+
+
+
+
+
 body {
   background: linear-gradient(135deg, #e6d6ff, #d6f5e8);
   font-family: Arial, Helvetica, sans-serif;
@@ -232,4 +251,107 @@ select:not(.placeholder) {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+/************************************/
+/*         Dark Mode Styles         */
+/************************************/
+
+body:has(.dark-mode) {
+  background: linear-gradient(135deg, #2d2438, #1f2f28);
+}
+
+.dark-mode .counter-container,
+.dark-mode .gallery-container,
+.dark-mode .profile-container,
+.dark-mode .task-manager,
+.dark-mode .shopping-container,
+.dark-mode .container {
+  background: #3a3347;
+  color: #f4f4f4;
+}
+
+
+.dark-mode .task-item,
+.dark-mode .shopping-item {
+  background: #2b2534;
+  border-color: #8f7ab8;
+}
+
+.dark-mode .task-text,
+.dark-mode .shopping-text,
+.dark-mode .shopping-text span {
+  color: #f4f4f4;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode p,
+.dark-mode span,
+.dark-mode label,
+.dark-mode pre {
+  color: #f4f4f4;
+}
+
+.dark-mode input,
+.dark-mode select {
+  background-color: #2b2534;
+  color: #f4f4f4;
+  border-color: #8f7ab8;
+}
+
+.dark-mode input::placeholder {
+  color: #c7bdd6;
+}
+.dark-mode .checkbox-container {
+  background-color: #2b2534;
+  color: #f4f4f4;
+  border-color: #8f7ab8;
+}
+
+.dark-mode .checkmark {
+  background-color: #3a3347;
+  border-color: #8f7ab8;
+}
+
+.dark-mode .input-group,
+.dark-mode .context-box,
+.dark-mode .context-profile,
+.dark-mode .checkbox-group {
+  background: #2b2534;
+  color: #f4f4f4;
+  border-color: #8f7ab8;
+}
+
+.dark-mode button {
+  background-color: #8f7ab8;
+  color: #f4f4f4;
+}
+
+.dark-mode button:hover {
+  background-color: #a792cf;
+}
+
+.dark-mode button:nth-child(even) {
+  background-color: #4d8f74;
+}
+
+.dark-mode button:nth-child(even):hover {
+  background-color: #61a88b;
+}
+
+.dark-mode button:disabled {
+  background-color: #555;
+  color: #bbb;
+}
+
+.dark-mode pre {
+  background: #2b2534;
+  color: #f4f4f4;
+  border: 2px solid #8f7ab8;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: left;
+  overflow-x: auto;
 }
