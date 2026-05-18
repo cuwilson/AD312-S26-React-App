@@ -15,3 +15,8 @@
   overflow-x: auto;
   border: 1px solid #e5e4e7;
 }
+.dark-mode .profile-immer-container pre {
+  background: #2b2534;
+  color: #f4f4f4;
+  border: 2px solid #8f7ab8;
+}
