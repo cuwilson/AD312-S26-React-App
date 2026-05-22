@@ -13,9 +13,49 @@
   max-width: 220px;
 }
 
+.site-layout {
+  min-height: 100vh;
+}
+
+.site-header {
+  width: 100%;
+  padding: 20px 16px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-bar a {
+  color: #7a5caa;
+  font-weight: bold;
+  text-decoration: none;
+  background: #f9f6ff;
+  border: 2px solid #e6d6ff;
+  border-radius: 12px;
+  padding: 10px 16px;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+  background: #f0fff7;
+  border-color: #b8f2d0;
+}
 
 
 
+.page-content {
+  width: 100%;
+}
 
 body {
   background: linear-gradient(135deg, #e6d6ff, #d6f5e8);
@@ -253,6 +293,26 @@ select:not(.placeholder) {
   align-items: center;
 }
 
+.error-message {
+  color: #c45c8a;
+  background: #fff0f6;
+
+  border: 1px solid #f2b8d0;
+  border-radius: 10px;
+
+  padding: 8px 12px;
+  margin: 6px auto 14px;
+
+  width: 100%;
+  max-width: 300px;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+
+  box-sizing: border-box;
+}
+
 
 /************************************/
 /*         Dark Mode Styles         */
@@ -260,6 +320,19 @@ select:not(.placeholder) {
 
 body:has(.dark-mode) {
   background: linear-gradient(135deg, #2d2438, #1f2f28);
+}
+
+.dark-mode .nav-bar a {
+  color: #f3f4f6;
+  background: #2e303a;
+  border-color: #4b5563;
+}
+
+.dark-mode .nav-bar a:hover,
+.dark-mode .nav-bar a.active {
+  color: #ffffff;
+  background: rgba(192, 132, 252, 0.18);
+  border-color: rgba(192, 132, 252, 0.7);
 }
 
 .dark-mode .counter-container,
@@ -354,4 +427,9 @@ body:has(.dark-mode) {
   padding: 12px;
   text-align: left;
   overflow-x: auto;
+}
+.dark-mode .error-message {
+  color: #f9b4d0;
+  background: rgba(161, 56, 103, 0.288);
+  border-color: rgba(238, 145, 184, 0.35);
 }
