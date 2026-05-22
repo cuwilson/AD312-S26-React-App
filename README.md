@@ -10,6 +10,17 @@ The app includes multiple features such as a counter, image gallery, user profil
 
 This project is part of a larger, long-term portfolio and serves as a foundation for building more advanced React applications.
 
+### Application Structure
+
+The application now uses React Router to separate the portfolio into multiple pages:
+
+- Home Page (`/`)
+  - displays the collection of React state management demos and components
+- Registration Form (`/register`)
+  - demonstrates form handling and validation using React Hook Form
+
+The app also includes a global light/dark mode theme system using React Context API and a shared ThemeProvider.
+
 ## How to Run
 
 1. Clone the repository
@@ -26,6 +37,8 @@ This project is part of a larger, long-term portfolio and serves as a foundation
 
 ### Technologies Used
 - React
+- React Router DOM
+- React Hook Form
 - Vite
 - TypeScript (TSX)
 - CSS
@@ -96,3 +109,24 @@ This project is part of a larger, long-term portfolio and serves as a foundation
 - allows deeply nested components to access shared data with `useContext`
 - includes multiple user profile components consuming the same shared context
 - updates shared state across multiple components simultaneously
+
+### Registration Form (React Hook Form)
+- built using the React Hook Form library
+- demonstrates uncontrolled form handling and optimized rendering
+- includes validation for:
+  - full name
+  - email address
+  - password strength
+  - matching passwords
+  - required role selection
+  - terms & conditions checkbox
+- uses React Hook Form features including:
+  - `register`
+  - `watch`
+  - `setValue`
+  - `reset`
+  - `isSubmitting`
+- automatically saves form progress to `localStorage`
+- restores saved form data when revisiting the page
+- simulates async API submission with a loading state
+- clears saved draft data after successful submission

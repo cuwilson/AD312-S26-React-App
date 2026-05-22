@@ -1,6 +1,6 @@
 import { UserProvider } from "./UserContext";
 import Dashboard from "./Dashboard";
-import "./css/ContextDemo.css";
+import "../css/ContextDemo.css";
 
 function ContextDemo() {
   return (

@@ -1,33 +1,32 @@
+import { Routes, Route, Link } from 'react-router-dom'
+import Home from './pages/Home'
+import Register from './pages/Register'
+import ThemeSwitcher from './components/ThemeSwitcher'
 import { useContext } from 'react'
-import { ThemeContext } from './ThemeContext'
-import ThemeSwitcher from './ThemeSwitcher.tsx'
-import Counter from './Counter.tsx'
-import Gallery from './Gallery.tsx'
-import UserProfile from './UserProfile.tsx'
-import TaskManager from './TaskManager.tsx'
-import ShoppingList from './ShoppingListWithImmer.tsx'
-import UserProfileWithImmer from './UserProfilewithImmer.tsx'
-import ContextDemo from "./ContextDemo.tsx";
+import { ThemeContext } from './components/ThemeContext'
 import './css/App.css'
 
 function App() {
-const { theme } = useContext(ThemeContext);
-
+  const { theme } = useContext(ThemeContext);
   return (
     <div className={`app-container ${theme}-mode`}>
-      <ThemeSwitcher />
-      <div className="full-row">
-        <Counter />
-      </div>
-      <div className="full-row">
-        <Gallery />
-      </div>
+      <div className="site-layout">
+        < header className="site-header">
+          <ThemeSwitcher />
+          <nav className="nav-bar">
+            <Link to="/">Home</Link>
+            <Link to="/register">Registration Form</Link>
+          </nav>
+        </header>
 
-      <UserProfile />
-      <UserProfileWithImmer />
-      <TaskManager />
-      <ShoppingList />
-      <ContextDemo />
+
+        <main className="page-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
+        </main>
+      </div>
     </div>
   )
 }
