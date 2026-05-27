@@ -1,0 +1,9 @@
+{
+  "profile": {
+    "username": "Oreo Wilson",
+    "email": "oreo.wilson@cutecats.com",
+    "bio": "hello",
+    "notifications": false
+  },
+  "$schema": "./node_modules/json-server/schema.json"
+}

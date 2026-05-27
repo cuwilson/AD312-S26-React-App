@@ -4,7 +4,9 @@
 *AD312 - Intermediate Dev 2 Spring 2026 at NSC*
 
 ### Overview
-This project is a collection of small React components built using Vite. It demonstrates how state updates work in React, including handling user interactions, managing form input, and working with nested state, and sharing state across components using the Context API.
+This project is a collection of small React components built using Vite. It demonstrates modern React development patterns including local component state, nested state management, Context API, form validation with React Hook Form, and server-state management using TanStack Query.
+
+The app includes examples of user interaction handling, asynchronous data fetching, API mutations, caching, and responsive UI updates across multiple independent components and pages.
 
 The app includes multiple features such as a counter, image gallery, user profile editor, task manager, shopping list, and Context API demo. Each component highlights different patterns for handling state, user input, UI updates, and component communication in React.
 
@@ -33,7 +35,11 @@ The app also includes a global light/dark mode theme system using React Context 
 
    `npm run dev`
 
-5. Open http://localhost:5173 in your browser
+5. In a separate terminal, start the JSON Server mock API:
+   
+   `npm run server`
+
+6. Open http://localhost:5173 in your browser
 
 ### Technologies Used
 - React
@@ -42,6 +48,8 @@ The app also includes a global light/dark mode theme system using React Context 
 - Vite
 - TypeScript (TSX)
 - CSS
+- TanStack Query (React Query)
+- JSON Server
 
 ## Features
 
@@ -130,3 +138,12 @@ The app also includes a global light/dark mode theme system using React Context 
 - restores saved form data when revisiting the page
 - simulates async API submission with a loading state
 - clears saved draft data after successful submission
+
+### Server Profile Form
+- demonstrates server-state management using TanStack Query
+- fetches profile data from a local JSON Server API using `useQuery`
+- hydrates React Hook Form inputs using `reset()`
+- updates server data using `useMutation`
+- invalidates cached queries after successful updates
+- disables form submission until changes are made using `isDirty`
+- simulates server-side validation conflicts and maps backend errors directly onto form fields using `setError`

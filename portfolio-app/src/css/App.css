@@ -293,6 +293,26 @@ select:not(.placeholder) {
   align-items: center;
 }
 
+.success-message {
+  color: #3d7a57;
+  background: #eefcf3;
+
+  border: 1px solid #b8f2d0;
+  border-radius: 10px;
+
+  padding: 8px 12px;
+  margin: 10px auto 0;
+
+  width: 100%;
+  max-width: 300px;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
 .error-message {
   color: #c45c8a;
   background: #fff0f6;
@@ -428,6 +448,13 @@ body:has(.dark-mode) {
   text-align: left;
   overflow-x: auto;
 }
+
+.dark-mode .success-message {
+  color: #b8f2d0;
+  background: rgba(72, 124, 96, 0.25);
+  border-color: rgba(184, 242, 208, 0.35);
+}
+
 .dark-mode .error-message {
   color: #f9b4d0;
   background: rgba(161, 56, 103, 0.288);

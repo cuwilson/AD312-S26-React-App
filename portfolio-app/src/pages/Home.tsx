@@ -5,6 +5,7 @@ import TaskManager from '../components/TaskManager'
 import ShoppingList from '../components/ShoppingListWithImmer'
 import UserProfileWithImmer from '../components/UserProfilewithImmer'
 import ContextDemo from '../components/ContextDemo'
+import ServerProfileForm from '../components/ServerProfileForm'
 
 function Home() {
     return (
@@ -21,6 +22,7 @@ function Home() {
             <TaskManager />
             <ShoppingList />
             <ContextDemo />
+            <ServerProfileForm />
         </div>
     )
 }
