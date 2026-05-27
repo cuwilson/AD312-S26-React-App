@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import {
   useQuery,
   useMutation,
@@ -15,6 +15,7 @@ type ProfileFormData = {
 
 function ServerProfileForm() {
   const queryClient = useQueryClient()
+  const [saveMessage, setSaveMessage] = useState("")
 
   const {
     register,
@@ -49,6 +50,9 @@ function ServerProfileForm() {
         throw new Error("That email address is already in use")
       }
 
+      // Simulate network delay
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+
       const response = await fetch("http://localhost:3001/profile", {
         method: "PUT",
         headers: {
@@ -70,6 +74,11 @@ function ServerProfileForm() {
       })
 
       reset(data)
+      setSaveMessage("Profile saved successfully!")
+
+      setTimeout(() => {
+        setSaveMessage("")
+      }, 3000)
     },
 
     onError: (error: Error) => {
@@ -133,6 +142,11 @@ function ServerProfileForm() {
         >
           {mutation.isPending ? "Saving..." : "Save Profile"}
         </button>
+        {saveMessage && (
+          <p className="success-message">
+            {saveMessage}
+          </p>
+        )}
       </form>
     </div>
   )

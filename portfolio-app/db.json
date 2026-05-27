@@ -2,8 +2,8 @@
   "profile": {
     "username": "Oreo Wilson",
     "email": "oreo.wilson@cutecats.com",
-    "bio": "I am learning React Hook Form with TanStack Query.",
-    "notifications": true
+    "bio": "hello",
+    "notifications": false
   },
   "$schema": "./node_modules/json-server/schema.json"
 }
