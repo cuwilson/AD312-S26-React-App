@@ -50,6 +50,7 @@ The app also includes a global light/dark mode theme system using React Context 
 - CSS
 - TanStack Query (React Query)
 - JSON Server
+- Chart.js
 
 ## Features
 
@@ -147,3 +148,11 @@ The app also includes a global light/dark mode theme system using React Context 
 - invalidates cached queries after successful updates
 - disables form submission until changes are made using `isDirty`
 - simulates server-side validation conflicts and maps backend errors directly onto form fields using `setError`
+
+### Poll Dashboard (Chart.js Integration)
+- demonstrates integration of a third-party JavaScript library (Chart.js) with React
+- uses `useRef` to access the canvas element and store the Chart.js instance
+- uses `useEffect` to instantiate the chart when the component mounts
+- updates the existing chart imperatively when React vote state changes
+- properly destroys the chart instance during cleanup to prevent memory leaks and canvas rendering errors
+- updates a live bar chart in real time as votes are cast
