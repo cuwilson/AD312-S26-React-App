@@ -6,10 +6,10 @@ import "../css/PollDashboard.css"
 function PollDashboard() {
     const { theme } = useContext(ThemeContext)
     const [votes, setVotes] = useState({
-        React: 0,
-        Vue: 0,
-        Angular: 0,
-        Svelte: 0,
+        Dogs: 0,
+        Cats: 0,
+        Birds: 0,
+        Fish: 0,
     })
 
     const canvasRef = useRef<HTMLCanvasElement | null>(null)
@@ -131,7 +131,7 @@ function PollDashboard() {
     return (
         <div className="container poll-container">
             <h1>Dynamic Poll Dashboard</h1>
-            <p>Vote for your favorite JavaScript framework:</p>
+            <p>Vote for your favorite pet:</p>
 
             <div className="poll-buttons">
                 {Object.keys(votes).map((option) => (
