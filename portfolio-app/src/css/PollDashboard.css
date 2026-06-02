@@ -1,0 +1,23 @@
+.poll-container {
+  width: min(700px, 100%);
+  box-sizing: border-box;
+}
+
+.poll-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.chart-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.poll-results {
+  margin-top: 20px;
+  font-weight: bold;
+}

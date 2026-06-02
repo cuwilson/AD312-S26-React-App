@@ -5,6 +5,7 @@ import ServerForm from './pages/ServerForm'
 import ThemeSwitcher from './components/ThemeSwitcher'
 import { useContext } from 'react'
 import { ThemeContext } from './components/ThemeContext'
+import Poll from './pages/Poll'
 import './css/App.css'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Link to="/">Home</Link>
             <Link to="/register">Registration Form</Link>
             <Link to="/server-profile">Server Profile Form</Link>
+            <Link to="/poll-dashboard">Poll Dashboard</Link>
           </nav>
         </header>
 
@@ -27,6 +29,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/server-profile" element={<ServerForm />} />
+            <Route path="/poll-dashboard" element={<Poll />} />
           </Routes>
         </main>
       </div>
