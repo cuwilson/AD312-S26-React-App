@@ -1,0 +1,22 @@
+.responsive-card {
+  width: min(500px, 100%);
+  transition: all 0.3s ease;
+}
+
+.desktop-card {
+  background: #f9f6ff;
+  border: 2px solid #e6d6ff;
+}
+
+.mobile-card {
+  background: #fff4ec;
+  border: 2px solid #ffd8c2;
+}
+
+.responsive-card h2 {
+  margin-top: 20px;
+}
+
+.responsive-card p {
+  margin: 8px 0;
+}

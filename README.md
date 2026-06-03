@@ -156,3 +156,10 @@ The app also includes a global light/dark mode theme system using React Context 
 - updates the existing chart imperatively when React vote state changes
 - properly destroys the chart instance during cleanup to prevent memory leaks and canvas rendering errors
 - updates a live bar chart in real time as votes are cast
+
+### Responsive Card
+- demonstrates side effects using the `useEffect` hook
+- listens for browser resize events
+- displays the current window width and height
+- switches layout and styling between desktop and mobile views
+- removes the resize event listener during cleanup to prevent memory leaks

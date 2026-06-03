@@ -2,6 +2,12 @@
   width: min(500px, 100%);
 }
 
+.context-container h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
 .context-box {
   background: #f9f6ff;
   border: 2px solid #e6d6ff;
