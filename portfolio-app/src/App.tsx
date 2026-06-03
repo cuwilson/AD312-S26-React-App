@@ -11,7 +11,7 @@ import './css/App.css'
 function App() {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className={`app-container ${theme}-mode`}>
+    <div className={`app-shell ${theme}-mode`}>
       <div className="site-layout">
         < header className="site-header">
           <ThemeSwitcher />
