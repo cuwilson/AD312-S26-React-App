@@ -157,7 +157,7 @@ The app also includes a global light/dark mode theme system using React Context 
 - properly destroys the chart instance during cleanup to prevent memory leaks and canvas rendering errors
 - updates a live bar chart in real time as votes are cast
 
-### Responsive Card
+### Responsive Card (Custom Hook)
 - demonstrates creation and use of a custom React hook
 - uses `useWindowSize` to track browser dimensions
 - shares reusable resize logic between components
@@ -165,3 +165,11 @@ The app also includes a global light/dark mode theme system using React Context 
 - removes event listeners during cleanup to prevent memory leaks
 - switches layout and styling between desktop and mobile views
 - displays the current window width and height
+
+### Custom useLocalStorage Hook
+- demonstrates creation of a reusable custom React hook
+- combines useState and useEffect
+- loads saved values from browser localStorage
+- automatically persists state changes
+- used by the global ThemeContext to remember the user's Dark Mode preference
+- preserves theme settings between page refreshes

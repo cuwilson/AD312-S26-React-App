@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 import "../css/TaskManager.css"
 
 interface TaskObject {
@@ -9,7 +10,10 @@ interface TaskObject {
 
 function TaskManager() {
 
-    const [tasks, setTasks] = useState<TaskObject[]>([])
+    const [tasks, setTasks] = useLocalStorage<TaskObject[]>(
+        "tasks",
+        []
+    )
     const [taskInput, setNewTask] = useState("");
 
 
@@ -31,7 +35,7 @@ function TaskManager() {
     return (
         <div className="container task-manager">
             <h1 className="task-manager-title">Tasks</h1>
-            <ul className= "task-list">
+            <ul className="task-list">
                 {tasks.map((task) => (
                     <li className="task-item" key={task.id}>
                         <span className={task.completed ? "task-text completed" : "task-text"}>{task.title}</span>
@@ -40,16 +44,16 @@ function TaskManager() {
                     </li>
                 ))}
             </ul>
-            <div className= "task-controls">
+            <div className="task-controls">
                 <input
-                type="text"
-                placeholder="New Task"
-                value={taskInput}
-                onChange={(e) => setNewTask(e.target.value)}
-            />
-            <button onClick={addTask}>Add</button>
+                    type="text"
+                    placeholder="New Task"
+                    value={taskInput}
+                    onChange={(e) => setNewTask(e.target.value)}
+                />
+                <button onClick={addTask}>Add</button>
             </div>
-            
+
         </div>
     )
 }
