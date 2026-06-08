@@ -158,8 +158,10 @@ The app also includes a global light/dark mode theme system using React Context 
 - updates a live bar chart in real time as votes are cast
 
 ### Responsive Card
-- demonstrates side effects using the `useEffect` hook
-- listens for browser resize events
-- displays the current window width and height
+- demonstrates creation and use of a custom React hook
+- uses `useWindowSize` to track browser dimensions
+- shares reusable resize logic between components
+- listens for browser resize events using `useEffect`
+- removes event listeners during cleanup to prevent memory leaks
 - switches layout and styling between desktop and mobile views
-- removes the resize event listener during cleanup to prevent memory leaks
+- displays the current window width and height

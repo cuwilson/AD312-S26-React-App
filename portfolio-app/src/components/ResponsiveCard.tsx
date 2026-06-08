@@ -1,28 +1,8 @@
-import { useEffect, useState } from "react"
+import useWindowSize from "../hooks/useWindowSize"
 import "../css/ResponsiveCard.css"
 
 function ResponsiveCard() {
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  })
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      })
-    }
-
-    window.addEventListener("resize", handleResize)
-
-    
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-    // The empty dependency array makes this effect run only once when the component mounts.
-  }, [])
+  const windowSize = useWindowSize()
 
   const isMobile = windowSize.width <= 768
 
