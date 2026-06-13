@@ -6,6 +6,8 @@ import ShoppingList from '../components/ShoppingListWithImmer'
 import UserProfileWithImmer from '../components/UserProfilewithImmer'
 import ContextDemo from '../components/ContextDemo'
 import ResponsiveCard from "../components/ResponsiveCard"
+import ErrorBoundary from "../components/ErrorBoundary"
+import BrokenWidget from "../components/BrokenWidget"
 
 function Home() {
     return (
@@ -23,6 +25,10 @@ function Home() {
             <ShoppingList />
             <ContextDemo />
             <ResponsiveCard />
+            <ErrorBoundary>
+                <BrokenWidget />
+            </ErrorBoundary>
+            <BrokenWidget />
         </div>
     )
 }

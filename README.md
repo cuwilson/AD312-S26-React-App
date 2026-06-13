@@ -4,7 +4,7 @@
 *AD312 - Intermediate Dev 2 Spring 2026 at NSC*
 
 ### Overview
-This project is a collection of small React components built using Vite. It demonstrates modern React development patterns including local component state, nested state management, Context API, form validation with React Hook Form, and server-state management using TanStack Query.
+This project is a collection of small React components built using Vite. It demonstrates modern React development patterns including local component state, nested state management, Context API, form validation with React Hook Form, server-state management using TanStack Query, and error handling with React Error Boundaries.
 
 The app includes examples of user interaction handling, asynchronous data fetching, API mutations, caching, and responsive UI updates across multiple independent components and pages.
 
@@ -17,9 +17,16 @@ This project is part of a larger, long-term portfolio and serves as a foundation
 The application now uses React Router to separate the portfolio into multiple pages:
 
 - Home Page (`/`)
-  - displays the collection of React state management demos and components
+  - displays the collection of React state management demos, custom hooks, charts, responsive components, and error boundary demonstrations
 - Registration Form (`/register`)
   - demonstrates form handling and validation using React Hook Form
+  - includes client-side validation, password matching, and localStorage persistence
+- Server Profile Form (`/server-profile`)
+  - demonstrates server-state management using TanStack Query
+  - fetches, updates, and caches profile data from a JSON Server API
+- Poll Dashboard (`/poll-dashboard`)
+  - demonstrates third-party library integration using Chart.js
+  - displays a live-updating poll visualization with React state and effects
 
 The app also includes a global light/dark mode theme system using React Context API and a shared ThemeProvider.
 
@@ -45,6 +52,7 @@ The app also includes a global light/dark mode theme system using React Context 
 - React
 - React Router DOM
 - React Hook Form
+- React Error Boundaries
 - Vite
 - TypeScript (TSX)
 - CSS
@@ -173,3 +181,10 @@ The app also includes a global light/dark mode theme system using React Context 
 - automatically persists state changes
 - used by the global ThemeContext to remember the user's Dark Mode preference
 - preserves theme settings between page refreshes
+
+### Error Boundary Demo
+- demonstrates React Error Boundaries using a Class Component
+- uses `getDerivedStateFromError()` to detect rendering failures
+- intentionally simulates a component crash using a mock weather widget
+- displays a fallback UI instead of allowing the application to crash
+- isolates component failures so the rest of the application remains functional
